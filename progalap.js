@@ -66,3 +66,27 @@ const valami = require("./module.js");
 console.log(valami.osszeadas(2, 5));
 
 //8. feladat
+const read = require("readline-sync");
+
+let n = read.question("Enter a number: ");
+let m = read.question("Enter a second number: ");
+
+const generate2dArray = (n, m) => {
+  let arr = new Array(n);
+  for (let i = 0; i < n; i++) {
+    arr[i] = new Array(m);
+  }
+  return arr;
+};
+
+generate2dArray();
+
+const fill2dArray = (arr) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      arr[i][j] = arr[i][j];
+    }
+  }
+};
+
+console.log(fill2dArray(generate2dArray));
